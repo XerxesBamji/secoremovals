@@ -1,0 +1,96 @@
+html,body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    /* text-align: center; */
+}
+
+input, textarea {
+  border-radius: 8px;
+  border: 1.5px solid #002644;
+  padding: .6rem .5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #002644;
+  background-color: #fff;
+}
+
+
+/* Gallery grid styling */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Reviews section */
+
+.review-card {
+    transition: transform 0.3s ease;
+}
+
+.avatar-gradient-1 { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+.avatar-gradient-2 { background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); }
+.avatar-gradient-3 { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+.avatar-gradient-4 { background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); }
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D62828;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: .6;
+}
+.carousel-dot.active {
+    background: #D62828;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.show-more-btn {
+    color: #002644;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    font-weight: 600;
+}
+
