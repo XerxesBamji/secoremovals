@@ -6,39 +6,39 @@ tailwind.config = {
       white: '#ffffff',
       black: '#111827',
 
-      /* 🔴 Primary – Fire / CTA */
+      /* 🟢 Primary – Forest Green */
       primary: {
-        DEFAULT: '#D62828',
-        50: '#FDEAEA',
-        100: '#F9C7C7',
-        200: '#F29A9A',
-        300: '#EB6D6D',
-        400: '#E63F3F',
-        500: '#D62828',
-        600: '#B22121',
-        700: '#861919',
-        800: '#5B1011',
-        900: '#320907',
+        DEFAULT: '#356f51',
+        50:  '#EDF5F0',
+        100: '#D2E8DA',
+        200: '#A6D1B6',
+        300: '#79BA92',
+        400: '#4DA36E',
+        500: '#356f51',  /* base */
+        600: '#2A5940',
+        700: '#1F4330',
+        800: '#142C20',
+        900: '#0A1610',
       },
 
-      /* 🔵 Secondary – Trust / Security */
+      /* 🔵 Secondary – Deep Teal (complements the green) */
       secondary: {
-        DEFAULT: '#002644',
-        50: '#E6ECF2',
-        100: '#C0D0E0',
-        200: '#99B3CC',
-        300: '#7397B8',
-        400: '#4D7AA3',
-        500: '#002644',
-        600: '#00223D',
-        700: '#001B30',
-        800: '#001423',
-        900: '#000D16',
+        DEFAULT: '#1A4A5C',
+        50:  '#E8F1F5',
+        100: '#C5DAE4',
+        200: '#8BB5C9',
+        300: '#5190AE',
+        400: '#326B87',
+        500: '#1A4A5C',
+        600: '#153B4A',
+        700: '#102C37',
+        800: '#0A1E25',
+        900: '#050F12',
       },
 
       /* ⚫ Neutral – Text, backgrounds, UI */
       neutral: {
-        50: '#F9FAFB',
+        50:  '#F9FAFB',
         100: '#F3F4F6',
         200: '#E5E7EB',
         300: '#D1D5DB',
@@ -50,26 +50,26 @@ tailwind.config = {
         900: '#111827',
       },
 
-      /* 🟡 Accent – Highlights & secondary CTAs */
+      /* 🟡 Accent – Warm Gold (contrast against green) */
       accent: {
-        DEFAULT: '#FFB703',
-        50: '#FFF7E5',
-        100: '#FFEAC0',
-        200: '#FFD98A',
-        300: '#FFC654',
-        400: '#FFB31E',
-        500: '#FFB703',
-        600: '#CC9402',
-        700: '#997001',
-        800: '#664C00',
-        900: '#332600',
+        DEFAULT: '#E8A320',
+        50:  '#FDF6E7',
+        100: '#FAE9C1',
+        200: '#F5D283',
+        300: '#EFBB45',
+        400: '#EAA928',
+        500: '#E8A320',
+        600: '#BA821A',
+        700: '#8C6213',
+        800: '#5D410D',
+        900: '#2F2106',
       },
 
       /* ✅ Semantic States */
-      success: '#00976A',
-      error: '#C2003A',
-      warning: '#FFB703',
-      info: '#5CC4FF',
+      success: '#2A7D53',
+      error:   '#C2003A',
+      warning: '#E8A320',
+      info:    '#3A9FBF',
     },
 
     container: {
@@ -79,13 +79,13 @@ tailwind.config = {
 
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         heading: ['Montserrat', 'sans-serif'],
       },
 
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
+          '0%':   { opacity: '0' },
           '100%': { opacity: '1' },
         },
       },
@@ -95,11 +95,9 @@ tailwind.config = {
       },
 
       boxShadow: {
-        sm: '0 1px 2px rgba(0,0,0,0.05)',
-        DEFAULT:
-          '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)',
-        lg:
-          '0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)',
+        sm:      '0 1px 2px rgba(0,0,0,0.05)',
+        DEFAULT: '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)',
+        lg:      '0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05)',
       },
     },
   },
