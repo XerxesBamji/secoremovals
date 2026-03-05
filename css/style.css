@@ -21,6 +21,57 @@ input, textarea {
   background-color: #fff;
 }
 
+/* Hero gradient: white at top, primary green at bottom */
+        .hero-gradient {
+            background: linear-gradient(to bottom, #ffffff 0%, #d2e8da 40%, #356f51 100%);
+        }
+
+        /* Trustpilot star colour */
+        .star-green { color: #356f51; }
+
+        /* Search bar polish */
+        .search-bar {
+            background: #fff;
+            border-radius: 9999px;
+            box-shadow: 0 4px 24px rgba(53,111,81,0.15);
+        }
+
+        /* Floating illustration blob */
+        .blob {
+            position: absolute;
+            border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+            opacity: 0.12;
+        }
+
+        /* Smooth fade-in */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up { animation: fadeUp 0.7s ease forwards; }
+        .delay-1 { animation-delay: 0.15s; opacity: 0; }
+        .delay-2 { animation-delay: 0.3s;  opacity: 0; }
+        .delay-3 { animation-delay: 0.45s; opacity: 0; }
+        .delay-4 { animation-delay: 0.6s;  opacity: 0; }
+
+        /* Van container with ground shadow */
+        .van-container {
+            position: relative;
+        }
+        .van-container::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 78%;
+            height: 20px;
+            background: radial-gradient(ellipse at center, rgba(20,50,30,0.38) 0%, transparent 72%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
 
 /* Gallery grid styling */
 
@@ -95,11 +146,10 @@ input, textarea {
 }
 
 .glass-effect {
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
