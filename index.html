@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Secormovals</title>
     <meta name="description" content="">
 
@@ -74,6 +74,30 @@
 </head>
 
 <body class="bg-gray-100 font-[Poppins]">
+
+<!-- Mobile sidebar backdrop — OUTSIDE hero card so it's not clipped -->
+<div id="menu-backdrop" class="fixed inset-0 bg-black/50 z-[998] hidden"></div>
+
+<!-- Mobile Sidebar — OUTSIDE hero card so overflow-hidden doesn't clip it -->
+<div class="shadow fixed top-0 right-0 h-full w-80 bg-[#1c2025] transform translate-x-full transition-transform duration-300 ease-in-out z-[999]" id="menu">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+            <img src="/img/logo-white.png" class="w-40" alt="Secormovals">
+            <button id="close-menu" class="text-white text-2xl"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="space-y-6">
+            <li><a class="text-white text-lg block hover:text-primary-300 transition-colors" href="aboutus.html">About Us</a></li>
+            <li><a class="text-white text-lg block hover:text-primary-300 transition-colors" href="our-services.html">Our Services</a></li>
+            <li class="mt-8">
+                <a href="contactus.html" class="flex justify-center items-center gap-3 bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-xs uppercase transition-all shadow-lg">
+                    <i class="fa-solid fa-phone"></i> Contact Us
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <main class="p-3 md:p-5">
 
     <!-- ═══════════════════════════════════════
@@ -99,27 +123,7 @@
         </svg>
 
         <!-- Mobile Sidebar -->
-        <!-- Mobile sidebar backdrop -->
-        <div id="menu-backdrop" class="fixed inset-0 bg-black/50 z-[998] hidden md:hidden"></div>
-
-        <div class="shadow fixed top-0 right-0 h-full w-80 bg-[#1c2025] transform translate-x-full transition-transform duration-300 ease-in-out z-[999] md:hidden" id="menu">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <img src="/img/logo-white.png" class="w-40" alt="Secormovals">
-                    <button id="close-menu" class="text-white text-2xl"><i class="fas fa-times"></i></button>
-                </div>
-                <ul class="space-y-6">
-                    <li><a class="text-white text-lg block hover:text-primary-300 transition-colors" href="aboutus.html">About Us</a></li>
-                    <li><a class="text-white text-lg block hover:text-primary-300 transition-colors" href="our-services.html">Our Services</a></li>
-                    <li class="mt-8">
-                        <a href="contactus.html" class="flex justify-center items-center gap-3 bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-xs uppercase transition-all shadow-lg">
-                            <i class="fa-solid fa-phone"></i> Contact Us
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <!-- (moved outside hero card — see top of body) -->
 
         <!-- Desktop links -->
         <div class="hidden md:flex md:items-center gap-8 text-sm font-medium text-gray-700">
@@ -171,45 +175,25 @@
                 </p>
 
                 <!-- Search bar -->
-                <div class="fade-up delay-3 search-bar flex flex-col sm:flex-row items-stretch sm:items-center gap-0 max-w-lg mx-auto lg:mx-0 mb-6 overflow-hidden p-2">
-                    <!-- From -->
-                    <div class="flex items-center gap-2 flex-1 px-4 py-2 border-b sm:border-b-0 sm:border-r border-gray-200">
-                        <i class="fas fa-map-marker-alt text-primary-500 text-sm w-4"></i>
-                        <input type="text" placeholder="Moving from…" class="outline-none text-sm text-gray-700 placeholder-gray-400 w-full bg-transparent">
-                    </div>
-                    <!-- To -->
-                    <div class="flex items-center gap-2 flex-1 px-4 py-2">
-                        <i class="fas fa-location-dot text-primary-400 text-sm w-4"></i>
-                        <input type="text" placeholder="Moving to…" class="outline-none text-sm text-gray-700 placeholder-gray-400 w-full bg-transparent">
-                    </div>
-                    <!-- CTA -->
-                    <a href="contactus.html" class="bg-primary-500 hover:bg-primary-600 text-white font-bold text-sm px-7 py-3 rounded-full transition-all whitespace-nowrap shadow-md shadow-primary-300/40 flex items-center gap-2">
-                        Get a Quote
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                <div class="fade-up delay-3 flex flex-row items-stretch sm:items-center lg:justify-start justify-center">
+                    <a class="glass-effect hover:bg-primary-600 hover:border-primary-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all flex items-center" href="aboutus.html">
+                        About Us
+                    </a>
+                    <a class="glass-effect hover:bg-primary-600 hover:border-primary-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all flex items-center mx-2" href="aboutus.html">
+                       <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Write a Review
                     </a>
                 </div>
 
-                <!-- App store badges -->
-                <div class="fade-up delay-4 flex flex-col sm:flex-row items-center lg:items-start gap-3">
-                    <span class="text-sm text-gray-500 font-medium">You can also book us on:</span>
-                    <div class="flex gap-3">
-                        <!-- Google Play -->
-                        <a href="#" class="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl transition-colors text-xs font-semibold shadow">
-                            <i class="fab fa-google-play text-lg"></i>
-                            <div class="text-left leading-tight">
-                                <div class="text-[9px] font-normal opacity-80">GET IT ON</div>
-                                <div>Google Play</div>
-                            </div>
-                        </a>
-                        <!-- App Store -->
-                        <a href="#" class="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl transition-colors text-xs font-semibold shadow">
-                            <i class="fab fa-apple text-xl"></i>
-                            <div class="text-left leading-tight">
-                                <div class="text-[9px] font-normal opacity-80">DOWNLOAD ON THE</div>
-                                <div>App Store</div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="flex gap-4 mt-8 fade-up delay-4 glass">
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook text-white fa-2x hover:text-primary-600"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram text-white fa-2x hover:text-primary-600"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-whatsapp text-white fa-2x hover:text-primary-600"></i>
+                    </a>
                 </div>
             </div>
 
