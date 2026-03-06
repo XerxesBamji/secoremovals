@@ -153,3 +153,8 @@ input, textarea {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.services {
+    /* background: linear-gradient(135deg, #2ecc8e, #1ab3a6); */
+    background: linear-gradient(to bottom, #ffffff 0%, #d2e8da 40%, #356f51 100%);
+}
